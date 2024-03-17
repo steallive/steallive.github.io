@@ -1,0 +1,547 @@
+
+*{
+    font-family: 'Unbounded', 'sans-serif';
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+hr{
+    background-color: #ffffff1f;
+}
+
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.container{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    position: absolute;
+    background-color: black;
+    padding: 10px 0;
+    z-index: 2;
+    position: absolute;               /* 2 */
+    left: 50%;                         /* 3 */
+    transform: translate(-50%, 0)
+}
+
+.logo{
+    font-size: 200%;
+    animation: 1s show_h1 ease;
+}
+
+.nav__link_active{
+    border: 2px solid white;
+}
+
+.header__lng span{
+    margin-right: 8px;
+}
+
+.lng_ru{
+    color: #B7B7B7;
+}
+
+.lng_eng{
+    color: #FFFFFF;
+}
+
+.intro{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    margin: auto;
+
+}
+
+.intro__h1 h1{
+    font-size: 70px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 72px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #00BA78;
+    animation: 1s show_h1 ease;
+}
+
+.intro__h1 p{
+    font-size: 100%;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 32px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #00BA78;
+    padding: 20px;
+    animation: 1s show ease;
+}
+
+.scroll__msg{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 0)
+}
+
+.scroll__msg p{
+    color: #00BA78;
+    font-size: 150%;
+    animation: glitch 1s linear infinite;
+}
+
+.info{
+    min-height: 100vh;
+    background-color: black;
+    color: #00BA78;
+    text-transform: uppercase;  
+}
+
+.info__text{
+    padding: 50px 0;
+    text-align: center;
+    
+}
+
+.info__text h2{
+    font-size: 68px;
+    
+}
+
+.info__video-container{
+    text-align: center;
+}
+
+.info__video{
+    width: 1080px;
+    height: 580px;
+    display: none;
+}
+
+.info__code{
+    display: none;
+}
+
+
+
+.info__cards{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.card {
+    padding: 24px;
+    border: 1px solid #ffffff1f;
+    border-radius: 18px;
+    background-color: black;
+    position: relative;
+    max-width: 350px;
+    transition: all 1.7s ease;    
+}
+
+.card h2{
+    padding-bottom: 10px;
+}
+  
+
+.info__binary{
+    padding: 50px 0;
+    text-align: center;
+    margin: auto;
+    max-width: 900px;
+}
+
+.info__binary h2{
+    font-size: 68px; 
+}
+
+.info__binary p{
+    padding: 50px 0 0 0;
+    font-size: 25px;  
+    
+}
+
+  @keyframes show {
+    from { opacity: 0; transform: translate(0, 200px)}
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+  }
+  @keyframes show_h1 {
+    from { opacity: 0; transform: translate(0, 100%)}
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+  }
+
+@keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+  }
+  
+  .intro__h1 h1:before,
+  .intro__h1 h1:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+  }
+  
+  .intro__h1 h1:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+  
+  @keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
+  }
+  
+  .intro__h1 h1:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+  
+  @keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(21deg); 
+    }
+  }
+
+.footer__text{
+    padding: 10px 0;
+}
+
+@media screen and (min-width: 1410px) and (max-width: 1500px){
+    .card {
+        padding: 24px;
+        border: 1px solid #ffffff1f;
+        border-radius: 18px;
+        background-color: #171616;
+        position: relative;
+        max-width: 330px;
+        transition: all 1.7s ease;    
+    }
+}
+
+@media screen and (min-width: 1366px) and (max-width: 1409px){
+    .card {
+        padding: 24px;
+        border: 1px solid #ffffff1f;
+        border-radius: 18px;
+        background-color: #171616;
+        position: relative;
+        max-width: 300px;
+        transition: all 1.7s ease;  
+    }
+    .card h2{
+        font-size: 20px;
+    }
+    .card p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1366px){
+    .intro__h1 h1{
+        font-size: 60px;
+        line-height: 60px;
+    }
+    .container{
+        max-width: 1100px;
+    }
+    .info__cards{
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        gap: 50px;
+        flex-wrap: wrap;
+        max-width: 800px;
+    }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1200px){
+    .intro__h1 h1{
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .container{
+        max-width: 1000px;
+    }
+    .card {
+        padding: 24px;
+        border: 1px solid #ffffff1f;
+        border-radius: 18px;
+        background-color: #171616;
+        position: relative;
+        max-width: 350px;
+        transition: all 1.7s ease;  
+    }
+    .card h2{
+        font-size: 25px;
+    }
+    .card p{
+        font-size: 20px;
+    }
+    .info__cards{
+        max-width: 800px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1100px){
+    .intro__h1 h1{
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .container{
+        max-width: 900px;
+    }
+    .info__cards{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        max-width: 800px;
+        margin: auto;
+    }
+    .info__binary{
+        max-width: 700px;
+        padding: 0;
+    }
+    .info__binary p{
+        font-size: 20px;
+        padding: 30px 0;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px){
+    .intro__h1 h1{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .container{
+        max-width: 700px;
+    }
+    .info__cards{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .info__binary{
+        max-width: 600px;
+        padding: 0;
+    }
+    .info__binary p{
+        font-size: 15px;
+        padding: 30px 0;
+    }
+    .card {
+        padding: 24px;
+        border: 1px solid #ffffff1f;
+        border-radius: 18px;
+        background-color: #171616;
+        position: relative;
+        max-width: 280px;
+        transition: all 1.7s ease;  
+    }
+    .card h2{
+        font-size: 20px;
+    }
+    .card p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 630px) and (max-width: 700px){
+    .intro__h1 h1{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .container{
+        max-width: 650px;
+    }
+    .info__binary{
+        max-width: 400px;
+        padding: 0;
+    }
+    .info__binary p{
+        font-size: 20px;
+        padding: 30px 0;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 630px){
+    .intro__h1 h1{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .container{
+        max-width: 600px;
+    }
+    .info__binary{
+        max-width: 350px;
+        padding: 0;
+    }
+    .info__binary p{
+        font-size: 20px;
+        padding: 30px 0;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px){
+    .intro__h1 h1{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .container{
+        max-width: 500px;
+    }
+    .intro__h1 p{
+        font-size: 15px;
+    }
+    .info__text h2{
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 500px){
+    .header{
+        padding: 20px;
+    }
+    .logo{
+        font-size: 30px;
+    }
+    .intro{
+        max-height: 100vh;
+    }
+    .intro__h1 h1{
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .intro__h1 p{
+        font-size: 10px;
+        padding: 0;
+    }
+    .container{
+        max-width: 400px;
+    }
+    .scroll__msg{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, 0)
+    }
+    .info__text{
+        padding: 20px 0;
+    }
+    .info__text h2{
+        font-size: 30px;
+    }
+    .info__video{
+        width: 380px;
+        height: 220px;
+    }
+    .info__code{
+        display: inline-block;
+        padding: 50px 0;
+        font-size: 20px;
+    }
+    .binary__text{
+        display: none;
+    }
+    .info__binary{
+        max-width: 350px;
+        padding: 0;
+    }
+    .info__binary p{
+        font-size: 15px;
+        padding: 30px 0;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 400px){
+    .header{
+        padding: 20px;
+    }
+    .logo{
+        font-size: 30px;
+    }
+    .intro{
+        max-height: 100vh;
+    }
+    .intro__h1 h1{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .intro__h1 p{
+        font-size: 8px;
+        padding: 0;
+    }
+    .container{
+        max-width: 400px;
+    }
+    .scroll__msg{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, 0)
+    }
+    .info__text{
+        padding: 20px 0;
+    }
+    .info__text h2{
+        font-size: 30px;
+    }
+    .info__binary{
+        max-width: 300px;
+        padding: 0;
+    }
+    .info__binary p{
+        font-size: 10spx;
+        padding: 30px 0;
+    }
+}
